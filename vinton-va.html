@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b2345" />
   <title>Gutter Services in Vinton, VA | Your Gutter Guy LLC</title>
   <meta name="description" content="Gutter installation, repair, cleaning &amp; guard services in Vinton, Virginia. Locally owned, free estimates. Call Jeff at (540) 354-1662." />
   <meta name="robots" content="index, follow" />
@@ -39,7 +40,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>html { scroll-behavior: smooth; }</style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
   <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-4 lg:gap-6">
@@ -116,7 +117,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="pb-20 lg:pb-0">
     <section class="bg-[#0b2345] text-white py-12 sm:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <nav class="text-sm text-slate-400 mb-4" aria-label="Breadcrumb">
@@ -277,12 +278,12 @@
       <h2 id="estimateModalTitle" class="text-2xl sm:text-3xl font-extrabold text-[#0b2345]">Request a Free Estimate</h2>
       <p class="text-slate-600 mt-3">Fill out the form below and Jeff will get back to you as soon as possible.</p>
       <form class="mt-8 grid md:grid-cols-2 gap-5" name="estimate" method="POST">
-        <label class="text-sm font-semibold text-slate-700">Full Name *<input type="text" name="name" autocomplete="name" required class="mt-2 p-3 rounded border border-slate-300 w-full"/></label>
-        <label class="text-sm font-semibold text-slate-700">Phone Number *<input type="tel" name="phone" autocomplete="tel" required class="mt-2 p-3 rounded border border-slate-300 w-full"/></label>
-        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Email Address *<input type="email" name="email" autocomplete="email" required class="mt-2 p-3 rounded border border-slate-300 w-full"/></label>
-        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Property Address *<input type="text" name="address" autocomplete="street-address" required class="mt-2 p-3 rounded border border-slate-300 w-full"/></label>
-        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Service Needed *<select name="service" required class="mt-2 p-3 rounded border border-slate-300 w-full"><option value="">Please select a service</option><option>Gutter Installation</option><option>Gutter Repair</option><option>Gutter Cleaning</option><option>Gutter Guards</option><option>Fascia Repair</option><option>Roofing Support</option></select></label>
-        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Project Details<textarea rows="5" name="details" placeholder="Tell us more about your project..." class="mt-2 p-3 rounded border border-slate-300 w-full"></textarea></label>
+        <label class="text-sm font-semibold text-slate-700">Full Name *<input type="text" name="name" autocomplete="name" required class="mt-2 p-3 rounded border border-slate-300 w-full text-base"/></label>
+        <label class="text-sm font-semibold text-slate-700">Phone Number *<input type="tel" name="phone" autocomplete="tel" required class="mt-2 p-3 rounded border border-slate-300 w-full text-base"/></label>
+        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Email Address *<input type="email" name="email" autocomplete="email" required class="mt-2 p-3 rounded border border-slate-300 w-full text-base"/></label>
+        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Property Address *<input type="text" name="address" autocomplete="street-address" required class="mt-2 p-3 rounded border border-slate-300 w-full text-base"/></label>
+        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Service Needed *<select name="service" required class="mt-2 p-3 rounded border border-slate-300 w-full text-base"><option value="">Please select a service</option><option>Gutter Installation</option><option>Gutter Repair</option><option>Gutter Cleaning</option><option>Gutter Guards</option><option>Fascia Repair</option><option>Roofing Support</option></select></label>
+        <label class="text-sm font-semibold text-slate-700 md:col-span-2">Project Details<textarea rows="5" name="details" placeholder="Tell us more about your project..." class="mt-2 p-3 rounded border border-slate-300 w-full text-base"></textarea></label>
         <button type="submit" class="bg-[#0b2345] hover:bg-[#123461] text-white py-4 rounded font-extrabold uppercase text-sm tracking-wide md:col-span-2 transition">Submit Estimate Request</button>
       </form>
       <p class="mt-4 text-xs text-slate-500 text-center">Your information is secure and will never be shared.</p>
@@ -295,5 +296,17 @@
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
     document.getElementById('estimateModal').addEventListener('click', function(e) { if(e.target===this) closeEstimateModal(); });
   </script>
+
+  <!-- Fixed mobile bottom CTA bar -->
+  <div class="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white border-t border-slate-200 shadow-lg flex" style="padding-bottom: env(safe-area-inset-bottom)">
+    <a href="tel:+15403541662" class="flex-1 flex items-center justify-center gap-2 text-[#0b2345] font-bold py-4 text-sm active:bg-slate-100 transition" aria-label="Call Jeff at 540-354-1662">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h2.1a1.5 1.5 0 011.42 1.02l.8 2.38a1.5 1.5 0 01-.36 1.53L6.4 7.99a11.04 11.04 0 005.61 5.61l1.06-1.06a1.5 1.5 0 011.53-.36l2.38.8A1.5 1.5 0 0118 14.4v2.1a1.5 1.5 0 01-1.5 1.5H16C8.27 18 2 11.73 2 4v-.5z"/></svg>
+      Call Jeff
+    </a>
+    <div class="w-px bg-slate-200"></div>
+    <a href="#" onclick="openEstimateModal(); return false;" class="flex-1 flex items-center justify-center bg-[#0b2345] active:bg-[#123461] text-white font-bold py-4 text-sm uppercase tracking-wide transition">
+      Free Estimate
+    </a>
+  </div>
 </body>
 </html>
